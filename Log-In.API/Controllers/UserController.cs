@@ -35,7 +35,7 @@ namespace Log_In.API.Controllers
         }
 
         [HttpPost("Logout")]
-        public IActionResult Logout(String sessionToken)
+        public IActionResult Logout([FromBody] string sessionToken)
         {
             db.Logout(sessionToken);
             return Ok();
