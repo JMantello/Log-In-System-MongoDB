@@ -61,6 +61,13 @@ namespace Log_In.API.Data
             return sessionToken;
         }
 
+        public void Logout(string sessionToken)
+        {
+            var collection = db.GetCollection<Session>("Sessions");
+            var filter = Builders<Session>.Filter.Eq("Token", sessionToken);
+            collection.DeleteOne(filter);
+        }
+
         public bool CreateUser(LoginCredential credential)
         {
             if (GetLoginCredential(credential.Email) != null) 

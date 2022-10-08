@@ -33,5 +33,12 @@ namespace Log_In.API.Controllers
             string? sessionToken = db.Login(credential);
             return sessionToken == null ? BadRequest("Nope") : Ok(sessionToken);
         }
+
+        [HttpPost("Logout")]
+        public IActionResult Logout(String sessionToken)
+        {
+            db.Logout(sessionToken);
+            return Ok();
+        }
     }
 }
