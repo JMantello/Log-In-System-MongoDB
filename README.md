@@ -16,7 +16,7 @@ When a user logs in, the credentials are checked against the ones stored in the 
 #### Logging Out
 When a user logs out, their session token is given to the API and then their session is deleted from the database.
 
-#### The database's design 
+#### The Database's Design 
 <table>
 <tr>
 <td> Table </td> <td> Document </td>
