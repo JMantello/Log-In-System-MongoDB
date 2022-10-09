@@ -1,6 +1,6 @@
 # Server-Side Log In Implementation for ASP.NET and MongoDB
 
-### Jonathan Mantello
+### By: Jonathan Mantello
 
 This is an implementation of a backend system in .NET that allows for a user to create credentails with a email/username and password, log in to the system which generates a session token, and log out of the system which deletes the token. All of the data is stored and interfaced with a cloud instance of MongoDB.
 
