@@ -7,11 +7,6 @@ This is an implementation of a backend system in .NET that allows for a user to 
 #### Purpose
 The purpose of this project is to act as a reference or an example of this kind of system where distinct users are created and managed with a database on the backend. 
 
-|             | **LoginDb**                                                                                                                                                                                                   |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Credentials | {   "_id": {     "$oid": "6340d144f15757f4ac04f97d"   },   "Email": "userexample@gmail.com",   "Password": "A+qcsss69wa4VabyUm4YTc2RafJJehnCC1sE+xZaM2g=",   "Salt": "3b7508f6-53e8-4bfa-bf4b-36551ecbd285" } |
-| Sessions    | {   "_id": {     "$oid": "63421ebf2f6ae53c435d4cba"   },   "Email": "userexample@gmail.com",   "Token": "19570544-9d29-4362-b416-dc7d1233efec" }                                                              |
-
 #### Storing Credentials
 Passwords are scrambled with the SHA256 hashing algorithm along with a randomly generated GUID salt and are stored in the database under the Credentails table, along with the user's email/username.
 
@@ -21,3 +16,42 @@ When a user logs in, the credentials are checked against the ones stored in the 
 #### Logging Out
 When a user logs out, their session token is given to the API and then their session is deleted from the database.
 
+#### The database's design 
+<table>
+<tr>
+<td> Table </td> <td> Document </td>
+</tr>
+<tr>
+<td> Credentials </td>
+<td>
+
+```json
+{
+  "_id": {
+    "$oid": "6340d144f15757f4ac04f97d"
+  },
+  "Email": "userexample@gmail.com",
+  "Password": "A+qcsss69wa4VabyUm4YTc2RafJJehnCC1sE+xZaM2g=",
+  "Salt": "3b7508f6-53e8-4bfa-bf4b-36551ecbd285"
+}
+```
+
+</td>
+</tr>
+<tr>
+<td> Sessions </td>
+<td>
+
+```json
+{
+  "_id": {
+    "$oid": "63421ebf2f6ae53c435d4cba"
+  },
+  "Email": "userexample@gmail.com",
+  "Token": "19570544-9d29-4362-b416-dc7d1233efec"
+}
+```
+
+</td>
+</tr>
+</table>
