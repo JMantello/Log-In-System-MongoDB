@@ -1,4 +1,4 @@
-# ASP.NET Log-In Implementation for MongoDB
+# ASP.NET Server-Side Log In Implementation for MongoDB
 
 ### Jonathan Mantello
 
