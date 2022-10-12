@@ -2,7 +2,7 @@
 
 ### By: Jonathan Mantello
 
-This is an implementation of a backend system in .NET that allows for a user to create credentails with a email/username and password, log in to the system which generates a session token, and log out of the system which deletes the token. All of the data is stored and interfaced with a cloud instance of MongoDB.
+This is an implementation of a backend system in .NET that allows for a user to create credentials with a email/username and password, log in to the system which generates a session token, and log out of the system which deletes the token. All of the data is stored and interfaced with a cloud instance of MongoDB.
 
 #### Purpose
 The purpose of this project is to act as a reference or an example of this kind of system where distinct users are created and managed with a database on the backend. 
